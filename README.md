@@ -3,7 +3,7 @@
 A fully responsive Invoice Management Application built as part of the HNG Internship Stage 2 task.
 
 ## Live Demo
-[https://invoice-app.pxxl.click/](Invoice App)
+Live Demo: [https://invoice-app.pxxl.click/](https://invoice-app.pxxl.click/)
 
 ## Tech Stack
 
