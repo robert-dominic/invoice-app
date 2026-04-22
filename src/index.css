@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-purple-primary: #7C5DFA;
+  --color-purple-light: #9277FF;
+  --color-dark-navy: #1E2139;
+  --color-dark-card: #252945;
+  --color-light-lavender: #DFE3FA;
+  --color-grey-medium: #888EB0;
+  --color-grey-blue: #7E88C3;
+  --color-black-deep: #0C0E16;
+  --color-red-primary: #EC5757;
+  --color-red-light: #FF9277;
+  --color-light-bg: #F8F8FB;
+  --color-dark-bg: #141625;
+
+  /* Font Family */
+  --font-sans: 'League Spartan', sans-serif;
+
+  /* Font Sizes */
+  --text-large: 36px;
+  --text-medium: 16px;
+  --text-small: 13px;
+
+  /* Line Heights */
+  --leading-large: 33px;
+  --leading-medium: 24px;
+  --leading-small: 18px;
+
+  /* Letter Spacing */
+  --tracking-large: -1px;
+  --tracking-medium: -0.25px;
+  --tracking-small: -0.1px;
+}
+
+@layer components {
+
+  /* Typography */
+  .text-responsive {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: var(--leading-medium);
+    letter-spacing: var(--tracking-medium);
+  }
+
+  .text-heading {
+    font-family: var(--font-sans);
+    font-size: var(--text-medium);
+    font-weight: 700;
+    line-height: var(--leading-medium);
+    letter-spacing: var(--tracking-medium);
+  }
+
+  .text-body {
+    font-family: var(--font-sans);
+    font-size: var(--text-small);
+    font-weight: 500;
+    line-height: var(--leading-small);
+    letter-spacing: var(--tracking-small);
+  }
+
+  /* Buttons */
+  .btn-base-purple {
+    background-color: var(--color-purple-primary);
+    color: white;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-family: var(--font-sans);
+    font-size: var(--text-medium);
+    height: 48px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+  }
+
+  .btn-base-purple:hover {
+    background-color: var(--color-purple-light);
+  }
+
+  .btn-base-lavender {
+    background-color: var(--color-light-lavender);
+    color: var(--color-grey-blue);
+    border-radius: 24px;
+    font-weight: 700;
+    font-family: var(--font-sans);
+    font-size: var(--text-medium);
+    height: 48px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+  }
+
+  .btn-base-lavender:hover {
+    background-color: #d7dcef;
+  }
+
+  .btn-secondary {
+    background-color: #F9FAFE;
+    color: var(--color-grey-blue);
+    border-radius: 24px;
+    font-weight: 700;
+    font-family: var(--font-sans);
+    font-size: var(--text-medium);
+    height: 48px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  .btn-secondary:hover {
+    background-color: #dfe3fa;
+  }
+
+  .dark .btn-secondary {
+    background-color: var(--color-dark-card);
+    color: #F9FAFE;
+  }
+
+  .dark .btn-secondary:hover {
+    background-color: #34395b;
+  }
+
+  .btn-base-dark {
+    background-color: var(--color-dark-navy);
+    color: white;
+    border-radius: 24px;
+    font-weight: 700;
+    font-family: var(--font-sans);
+    font-size: var(--text-medium);
+    height: 48px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+  }
+
+  .btn-base-dark:hover {
+    background-color: var(--color-black-deep);
+  }
+
+  .btn-delete {
+    background-color: var(--color-red-primary);
+    color: white;
+    border-radius: 24px;
+    font-weight: 700;
+    font-family: var(--font-sans);
+    font-size: var(--text-medium);
+    height: 48px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+  }
+
+  .btn-delete:hover {
+    background-color: var(--color-red-light);
+  }
+}
+
+/* Responsive typography */
+@media (min-width: 768px) {
+  .text-responsive {
+    font-size: 24px;
+    line-height: 22px;
+    letter-spacing: -0.75px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-responsive {
+    font-size: var(--text-large);
+    line-height: var(--leading-large);
+    letter-spacing: var(--tracking-large);
+  }
+}
+
+/* Responsive buttons */
+@media (max-width: 640px) {
+
+  .btn-base-purple,
+  .btn-secondary,
+  .btn-base-lavender,
+  .btn-base-dark,
+  .btn-delete {
+    height: 40px;
+    padding: 0 16px;
+    font-size: 12px;
+  }
+}
+
+/* Scrollbar */
+.drawer-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.drawer-scroll::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.drawer-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-grey-blue);
+  border-radius: 4px;
+  min-height: 50px;
+}
+
+@media (max-width: 767px) {
+  .drawer-scroll::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Calendar — Dark mode */
+.react-datepicker {
+  font-family: var(--font-sans) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25) !important;
+  background-color: var(--color-dark-card) !important;
+}
+
+.react-datepicker__header {
+  background-color: var(--color-dark-card) !important;
+  border-bottom: none !important;
+  padding-top: 16px !important;
+}
+
+.react-datepicker__current-month {
+  color: white !important;
+  font-family: var(--font-sans) !important;
+  font-weight: 700 !important;
+  font-size: var(--text-medium) !important;
+}
+
+.react-datepicker__day-names {
+  display: none !important;
+}
+
+.react-datepicker__day {
+  color: white !important;
+  font-family: var(--font-sans) !important;
+  font-weight: 700 !important;
+  font-size: var(--text-small) !important;
+  border-radius: 50% !important;
+  width: 2rem !important;
+  line-height: 2rem !important;
+  background-color: transparent !important;
+}
+
+.react-datepicker__day:hover {
+  color: white !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--selected:hover {
+  background-color: transparent !important;
+  color: var(--color-purple-primary) !important;
+}
+
+.react-datepicker__day--keyboard-selected {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.react-datepicker__day--outside-month {
+  color: var(--color-grey-medium) !important;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: var(--color-purple-primary) !important;
+}
+
+.react-datepicker__triangle {
+  display: none !important;
+}
+
+/* Calendar responsive */
+@media (max-width: 640px) {
+  .react-datepicker {
+    font-size: 11px !important;
+  }
+
+  .react-datepicker__day {
+    width: 1.6rem !important;
+    line-height: 1.6rem !important;
+  }
+}
+
+/* Calendar — Light mode */
+.light-calendar .react-datepicker {
+  background-color: white !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.light-calendar .react-datepicker__header {
+  background-color: white !important;
+}
+
+.light-calendar .react-datepicker__current-month {
+  color: var(--color-dark-navy) !important;
+}
+
+.light-calendar .react-datepicker__day {
+  color: var(--color-dark-navy) !important;
+}
+
+.light-calendar .react-datepicker__day--selected,
+.light-calendar .react-datepicker__day--selected:hover {
+  color: var(--color-purple-primary) !important;
+}
+
+.light-calendar .react-datepicker__day--outside-month {
+  color: var(--color-grey-medium) !important;
+}
+
+body {
+  overflow-x: hidden;
+}
