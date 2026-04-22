@@ -3,7 +3,7 @@
 A fully responsive Invoice Management Application built as part of the HNG Internship Stage 2 task.
 
 ## Live Demo
-[Add Vercel URL here]
+[https://invoice-app.pxxl.click/](Invoice App)
 
 ## Tech Stack
 
@@ -29,6 +29,7 @@ A fully responsive Invoice Management Application built as part of the HNG Inter
 
 ## Architecture
 
+```
 src/
 ├── components/
 │   ├── filter/          # Filter dropdown
@@ -41,7 +42,7 @@ src/
 ├── pages/               # ListPage, DetailPage
 ├── utils/               # helpers.js, validation.js
 └── index.css            # Design tokens + component classes
-
+```
 ## Design System
 
 All colors, typography, and spacing are defined as CSS custom properties in `index.css` under `@theme`. Component styles live in `@layer components`. This means the entire app's visual language can be updated from one file.
